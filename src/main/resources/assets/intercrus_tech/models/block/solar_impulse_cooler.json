@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "intercrus_tech:block/solar_impulse_cooler",
+    "bottom": "intercrus_tech:block/solar_impulse_cooler_top",
+    "side": "intercrus_tech:block/solar_impulse_cooler_side"
+  }
+}

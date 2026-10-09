@@ -1,0 +1,29 @@
+{
+  "variants": {
+    "facing=up": {
+      "model": "intercrus_tech:block/solar_impulse_drive"
+    },
+    "facing=down": {
+      "model": "intercrus_tech:block/solar_impulse_drive",
+      "x": 180
+    },
+    "facing=north": {
+      "model": "intercrus_tech:block/solar_impulse_drive",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "intercrus_tech:block/solar_impulse_drive",
+      "x": 270
+    },
+    "facing=east": {
+      "model": "intercrus_tech:block/solar_impulse_drive",
+      "x": 90,
+      "y": 90
+    },
+    "facing=west": {
+      "model": "intercrus_tech:block/solar_impulse_drive",
+      "x": 90,
+      "y": 270
+    }
+  }
+}

@@ -36,7 +36,7 @@ public class SolarImpulseCoolerEntity extends BlockEntity {
         int prev = getBlockState().getValue(SolarImpulseCooler.POWER);
         int current = getThrusterStrength(prev);
 
-        double force_strength = current * 2 / 15.0;
+        double force_strength = current * 4 / 15.0;
 
         if (current != prev) {
             level.setBlock(getBlockPos(), getBlockState().setValue(SolarImpulseCooler.POWER, current), 3);
