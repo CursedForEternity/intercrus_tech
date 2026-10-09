@@ -1,9 +1,9 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "com.crossower.valkyrien_mechanic.mixin",
+  "package": "owo.cursed.intercrus_tech.mixin",
   "compatibilityLevel": "JAVA_8",
-  "refmap": "mixins.valkyrien_mechanic.refmap.json",
+  "refmap": "mixins.intercrus_tech.refmap.json",
   "mixins": [
   ],
   "client": [

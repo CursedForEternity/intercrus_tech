@@ -1,4 +1,4 @@
-package com.crossower.valkyrien_mechanic.client
+package owo.cursed.intercrus_tech.client
 
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent
 

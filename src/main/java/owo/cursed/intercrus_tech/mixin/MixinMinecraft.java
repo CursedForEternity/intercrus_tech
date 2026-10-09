@@ -1,4 +1,4 @@
-package com.crossower.valkyrien_mechanic.mixin;
+package owo.cursed.intercrus_tech.mixin;
 
 import net.minecraft.client.Minecraft;
 import org.spongepowered.asm.mixin.Mixin;

@@ -55,7 +55,7 @@ legacyForge {
     }
 }
 
-var mixinId = "valkyrien_mechanic"
+var mixinId = "intercrus_tech"
 
 mixin {
     add sourceSets.main, "mixins.${mixinId}.refmap.json"
@@ -68,6 +68,25 @@ mixin {
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
+    maven {
+        name = 'CurseForge'
+        url = 'https://cursemaven.com'
+    }
+    maven {
+        name = 'MinecraftForge'
+        url = 'https://maven.minecraftforge.net/'
+    }
+    maven {
+        name = "Modrinth"
+        url = "https://api.modrinth.com/maven"
+    }
+    maven { url = 'https://maven.blamejared.com/' }
+    maven {
+        name 'Curios maven'
+        url = "https://maven.theillusivec4.top/"
+    }
+    mavenCentral()
+    maven { url = "https://maven.createmod.net" }
     //Add any repositories to fetch dependencies from here.
     //Most dependencies are mirrored to the VS Maven, so by default only it is included alongside mavenLocal and KFF.
     mavenLocal()
@@ -116,16 +135,25 @@ dependencies {
 
     // region VS deps
     implementation "com.fasterxml.jackson.core:jackson-annotations:2.13.3"
+    implementation "com.fasterxml.jackson.core:jackson-databind:2.22.3"
     compileOnly("org.joml:joml:1.10.4")
     compileOnly("org.joml:joml-primitives:1.10.0")
     modImplementation "thedarkcolour:kotlinforforge:4.11.0"
     // endregion
 
+    //ZP-suite region
+    //startregion
+    modImplementation("curse.maven:lodestone-616457:6213794")
+    modImplementation("curse.maven:vlib-1265893:7378603")
+    modImplementation("curse.maven:zero-point-labs-1369441:7745675")
+    modImplementation("maven.modrinth:6sObdFxl:bcymoLCq")
+    modImplementation("net.createmod.ponder:Ponder-Forge-${minecraft_version}:${ponder_version}")
+    modImplementation("dev.engine-room.flywheel:flywheel-forge-${minecraft_version}:${flywheel_version}")
+    //endregion
+
     // Create
     //modImplementation("com.simibubi.create:create-${minecraft_version}:${create_version}:slim") { transitive = false }
-    //modImplementation("net.createmod.ponder:Ponder-Forge-${minecraft_version}:${ponder_version}")
     //modCompileOnly("dev.engine-room.flywheel:flywheel-forge-api-${minecraft_version}:${flywheel_version}")
-    //modRuntimeOnly("dev.engine-room.flywheel:flywheel-forge-${minecraft_version}:${flywheel_version}")
     //modImplementation("com.tterrag.registrate:Registrate:${registrate_version}")
 
     // JEI

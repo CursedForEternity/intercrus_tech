@@ -1,20 +1,20 @@
-package com.crossower.valkyrien_mechanic;
+package owo.cursed.intercrus_tech
 
 import net.minecraftforge.fml.common.Mod
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext
 import net.minecraftforge.fml.loading.FMLEnvironment
 import org.valkyrienskies.mod.api.vsApi
-import com.crossower.valkyrien_mechanic.client.ValkyrienMechanicClient
-import com.crossower.valkyrien_mechanic.ValkyrienMechanic.Companion.MOD_ID
+import owo.cursed.intercrus_tech.client.ValkyrienMechanicClient
+import owo.cursed.intercrus_tech.IntercrusTechMod.Companion.MOD_ID
 
 
 @Mod(MOD_ID)
-class ValkyrienMechanic {
+class IntercrusTechMod {
 
     init {
         val modEventBus = FMLJavaModLoadingContext.get().modEventBus
-
+        
         modEventBus.addListener(::init)
         if (FMLEnvironment.dist.isClient) {
             modEventBus.addListener(ValkyrienMechanicClient.Companion::clientInit)
@@ -22,7 +22,7 @@ class ValkyrienMechanic {
     }
 
     companion object {
-        const val MOD_ID = "valkyrien_mechanic"
+        const val MOD_ID = "intercrus_tech"
 
         @JvmStatic
         fun init(event: FMLCommonSetupEvent) {
