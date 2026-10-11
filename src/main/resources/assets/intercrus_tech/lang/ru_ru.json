@@ -1,7 +1,7 @@
 {
-  "intercrus_tech.blocks.solar_impulse_drive": "Драйв Солнечного Импульса",
-  "intercrus_tech.blocks.solar_impulse_cooler": "Кулер Солнечного Драйва",
-  "intercrus_tech.blocks.autocannon": "Автопушка",
-  "intercrus_tech.blocks.cannon_loader": "Загрузчик Орудия",
-  "intercrus_tech.blocks.cannon_barrel": "Ствол Орудия"
+  "block.intercrus_tech.solar_impulse_drive": "Драйв Солнечного Импульса",
+  "block.intercrus_tech.solar_impulse_cooler": "Кулер Солнечного Драйва",
+  "block.intercrus_tech.autocannon": "Автопушка",
+  "block.intercrus_tech.cannon_loader": "Загрузчик Орудия",
+  "block.intercrus_tech.cannon_barrel": "Ствол Орудия"
 }

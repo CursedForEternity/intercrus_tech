@@ -1,7 +1,7 @@
 {
-  "intercrus_tech.blocks.solar_impulse_drive": "Solar Impulse Drive",
-  "intercrus_tech.blocks.solar_impulse_cooler": "Solar Impulse Cooler",
-  "intercrus_tech.blocks.autocannon": "Autocannon",
-  "intercrus_tech.blocks.cannon_loader": "Cannon Loader",
-  "intercrus_tech.blocks.cannon_barrel": "Cannon Barrel"
+  "block.intercrus_tech.solar_impulse_drive": "Solar Impulse Drive",
+  "block.intercrus_tech.solar_impulse_cooler": "Solar Impulse Cooler",
+  "block.intercrus_tech.autocannon": "Autocannon",
+  "block.intercrus_tech.cannon_loader": "Cannon Loader",
+  "block.intercrus_tech.cannon_barrel": "Cannon Barrel"
 }
