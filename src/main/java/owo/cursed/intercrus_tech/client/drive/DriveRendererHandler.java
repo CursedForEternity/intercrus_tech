@@ -108,6 +108,14 @@ public class DriveRendererHandler {
 
     private static final List<Vector4f> shape = List.of(
 
+            new Vector4f(0.6667f, 0, 0.5f, 0f),
+            new Vector4f(0.5833f, 0, 0.6443f, 0.167f),
+            new Vector4f(0.4167f, 0, 0.6443f, 0.333f),
+            new Vector4f(0.3333f, 0, 0.5f, 0.5f),
+            new Vector4f(0.4167f, 0, 0.3557f, 0.667f),
+            new Vector4f(0.5833f, 0, 0.3557f, 0.833f),
+            new Vector4f(0.6667f, 0, 0.5f, 1f),
+
             new Vector4f(1.0f, 0.1f, 0.5f, 0f),
             new Vector4f(0.75f, 0.1f, 0.9333f, 0.167f),
             new Vector4f(0.25f, 0.1f, 0.9333f, 0.333f),

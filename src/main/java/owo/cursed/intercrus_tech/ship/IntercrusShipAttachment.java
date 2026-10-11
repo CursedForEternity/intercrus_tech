@@ -14,7 +14,6 @@ import org.valkyrienskies.core.impl.game.ships.PhysShipImpl;
 import org.valkyrienskies.mod.common.jackson.BlockPosKeyDeserializer;
 import org.valkyrienskies.mod.common.jackson.BlockPosKeySerializer;
 
-
 import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -52,4 +51,5 @@ public final class IntercrusShipAttachment implements ShipPhysicsListener {
     public static Optional<IntercrusShipAttachment> getOrCreate(ServerLevel level, BlockPos pos) {
             return getShipAt(level, pos).map(it -> it.getOrPutAttachment(IntercrusShipAttachment.class, IntercrusShipAttachment::new));
     }
+
 }

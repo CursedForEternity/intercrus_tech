@@ -14,6 +14,8 @@ import org.valkyrienskies.mod.api.ValkyrienSkies;
 import org.valkyrienskies.mod.common.VSGameUtilsKt;
 import owo.cursed.intercrus_tech.blocks.ModBlockEntities;
 import owo.cursed.intercrus_tech.blocks.ModBlocks;
+import owo.cursed.intercrus_tech.client.particles.ModParticles;
+import owo.cursed.intercrus_tech.entity.ModEntities;
 import owo.cursed.intercrus_tech.items.ModCreativeTabs;
 import owo.cursed.intercrus_tech.items.ModItems;
 import owo.cursed.intercrus_tech.ship.IntercrusShipAttachment;
@@ -31,6 +33,8 @@ public class IntercrusTechMod {
         ModBlocks.BLOCKS.register(eventBus);
         ModBlockEntities.BLOCK_ENTITIES.register(eventBus);
         ModItems.ITEMS.register(eventBus);
+        ModEntities.ENTITY_TYPES.register(eventBus);
+        ModParticles.PARTICLE_TYPES.register(eventBus);
         ModCreativeTabs.register(eventBus);
 
         ValkyrienSkies.api().registerAttachment(IntercrusShipAttachment.class);

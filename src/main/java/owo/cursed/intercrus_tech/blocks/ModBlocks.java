@@ -7,6 +7,9 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import owo.cursed.intercrus_tech.IntercrusTechMod;
+import owo.cursed.intercrus_tech.blocks.autocannon.AutocannonBlock;
+import owo.cursed.intercrus_tech.blocks.cannon.CannonBarrelBlock;
+import owo.cursed.intercrus_tech.blocks.cannon.CannonLoaderBlock;
 import owo.cursed.intercrus_tech.blocks.solar_impulse_drive.SolarImpulseCooler;
 import owo.cursed.intercrus_tech.blocks.solar_impulse_drive.SolarImpulseDrive;
 
@@ -30,5 +33,21 @@ public class ModBlocks {
                     .sound(SoundType.NETHERITE_BLOCK)
             )
     );
+
+    public static final RegistryObject<Block> AUTOCANNON = BLOCKS.register("autocannon",
+            () -> new AutocannonBlock(BlockBehaviour.Properties.of()
+                    .strength(3.0f)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> CANNON_BARREL = BLOCKS.register("cannon_barrel",
+            () -> new CannonBarrelBlock(BlockBehaviour.Properties.of()
+                    .strength(3.0f)
+                    .noOcclusion()
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> CANNON_LOADER = BLOCKS.register("cannon_loader",
+            () -> new CannonLoaderBlock(BlockBehaviour.Properties.of()
+                    .strength(3.0f)
+                    .requiresCorrectToolForDrops()));
 
 }

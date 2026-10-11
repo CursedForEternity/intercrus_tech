@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "intercrus_tech:block/cannon_top",
+    "east": "intercrus_tech:block/cannon_side",
+    "north": "intercrus_tech:block/cannon_front",
+    "particle": "intercrus_tech:block/cannon_side",
+    "south": "intercrus_tech:block/cannon_front",
+    "up": "intercrus_tech:block/cannon_top",
+    "west": "intercrus_tech:block/cannon_side"
+  }
+}
