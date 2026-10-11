@@ -1,0 +1,14 @@
+{
+  "autocannon": {
+    "subtitle": "subtitles.intercrus_tech.autocannon",
+    "sounds": [
+      "intercrus_tech:autocannon"
+    ]
+  },
+  "cannon": {
+    "subtitle": "subtitles.intercrus_tech.cannon",
+    "sounds": [
+      "intercrus_tech:cannon"
+    ]
+  }
+}

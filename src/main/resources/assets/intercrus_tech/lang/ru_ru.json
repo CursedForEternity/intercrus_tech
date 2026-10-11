@@ -3,5 +3,7 @@
   "block.intercrus_tech.solar_impulse_cooler": "Кулер Солнечного Драйва",
   "block.intercrus_tech.autocannon": "Автопушка",
   "block.intercrus_tech.cannon_loader": "Загрузчик Орудия",
-  "block.intercrus_tech.cannon_barrel": "Ствол Орудия"
+  "block.intercrus_tech.cannon_barrel": "Ствол Орудия",
+  "subtitles.intercrus_tech.autocannon": "Выхлоп Автопушки",
+  "subtitles.intercrus_tech.cannon": "Огонь Орудия"
 }

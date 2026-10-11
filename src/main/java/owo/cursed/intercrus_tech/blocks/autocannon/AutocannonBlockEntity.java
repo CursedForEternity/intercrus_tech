@@ -1,7 +1,6 @@
 package owo.cursed.intercrus_tech.blocks.autocannon;
 
 import g_mungus.zpl.ZeroPointLabsMod;
-import g_mungus.zpl.sound.ModSounds;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
@@ -24,6 +23,7 @@ import org.valkyrienskies.core.api.ships.Ship;
 import org.valkyrienskies.mod.common.VSGameUtilsKt;
 import org.valkyrienskies.mod.common.util.VectorConversionsMCKt;
 import owo.cursed.intercrus_tech.blocks.ModBlockEntities;
+import owo.cursed.intercrus_tech.client.ModSounds;
 import owo.cursed.intercrus_tech.entity.AutocannonAmmoEntity;
 
 import javax.annotation.Nonnull;
@@ -149,7 +149,7 @@ public class AutocannonBlockEntity extends BlockEntity {
         level.playSound(
                 null,
                 pos,
-                ModSounds.ENERGY_ORB_SHOOT.get(),
+                ModSounds.AUTOCANNON_SHOT.get(),
                 SoundSource.BLOCKS,
                 1.0F,
                 1.0F

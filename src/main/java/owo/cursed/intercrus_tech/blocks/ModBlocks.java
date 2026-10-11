@@ -12,6 +12,7 @@ import owo.cursed.intercrus_tech.blocks.cannon.CannonBarrelBlock;
 import owo.cursed.intercrus_tech.blocks.cannon.CannonLoaderBlock;
 import owo.cursed.intercrus_tech.blocks.solar_impulse_drive.SolarImpulseCooler;
 import owo.cursed.intercrus_tech.blocks.solar_impulse_drive.SolarImpulseDrive;
+import owo.cursed.intercrus_tech.blocks.wheel.WheelBlock;
 
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
@@ -47,6 +48,11 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> CANNON_LOADER = BLOCKS.register("cannon_loader",
             () -> new CannonLoaderBlock(BlockBehaviour.Properties.of()
+                    .strength(3.0f)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> WHEEL_BLOCK = BLOCKS.register("wheel_block",
+            () -> new WheelBlock(BlockBehaviour.Properties.of()
                     .strength(3.0f)
                     .requiresCorrectToolForDrops()));
 

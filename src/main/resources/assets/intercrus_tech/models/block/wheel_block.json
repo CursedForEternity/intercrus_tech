@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "intercrus_tech:block/wheel_block_side",
+    "east": "intercrus_tech:block/wheel_block_side",
+    "north": "intercrus_tech:block/wheel_block",
+    "particle": "intercrus_tech:block/wheel_block_side",
+    "south": "intercrus_tech:block/wheel_block",
+    "up": "intercrus_tech:block/wheel_block_side",
+    "west": "intercrus_tech:block/wheel_block_side"
+  }
+}

@@ -65,11 +65,16 @@ public class CannonAmmoEntity extends FastProjectileEntity {
 
         if (this.level().isClientSide) {
             double scale = ZeroPointLabsMod.getDimensionScale(this.level());
+
+            // Pass scale through velocity parameters (will be used for sizing)
             this.level().addParticle(
                     ModParticles.TRACER_BIG.get(),
                     this.xOld, this.yOld, this.zOld,
-                    scale, 0, 0
+                    scale, 0, 0  // Pass scale in xSpeed parameter
             );
+        }
+
+        if (this.level().isClientSide()) {
             return;
         }
 
@@ -95,45 +100,29 @@ public class CannonAmmoEntity extends FastProjectileEntity {
                     return;
                 }
             }
-            int radius = 1;
-            for (BlockPos targetPos : BlockPos.betweenClosed(hitPos.offset(-radius, -radius, -radius), hitPos.offset(radius, radius, radius))) {
-                double distanceSq = hitPos.distSqr(targetPos);
-                if (distanceSq > (radius * radius)) continue;
 
-                BlockState state = this.level().getBlockState(targetPos);
-                if (state.getDestroySpeed(this.level(), targetPos) < 0) continue;
+            BlockState state = this.level().getBlockState(hitPos);
+            if (state.getDestroySpeed(this.level(), hitPos) >= 0) {
+                float hardness = state.getDestroySpeed(this.level(), hitPos);
+                float damageIncrement = miningPower / Math.max(hardness, 0.1f) / 5.0f;
 
-                float hardness = state.getDestroySpeed(this.level(), targetPos);
-
-                float powerMultiplier = targetPos.equals(hitPos) ? 1.0f : 0.5f;
-                float damageIncrement = (miningPower * powerMultiplier) / Math.max(hardness, 0.1f) / 3.0f;
-
-                float currentProgress = BLOCK_MINING_PROGRESS.getOrDefault(targetPos, 0.0f) + damageIncrement;
-
-                int breakerId = Math.abs((this.getId() * 31 + targetPos.hashCode()));
+                float currentProgress = BLOCK_MINING_PROGRESS.getOrDefault(hitPos, 0.0f) + damageIncrement;
+                int stage = Math.min((int) (currentProgress * 10), 9);
+                this.level().destroyBlockProgress(hitPos.hashCode(), hitPos, stage);
 
                 if (currentProgress >= 1.0f) {
-                    this.level().destroyBlock(targetPos, true, this);
-                    BLOCK_MINING_PROGRESS.remove(targetPos);
-                    try {
-                        this.level().destroyBlockProgress(breakerId, targetPos, -1);
-                    } catch (Exception ignored) {}
+                    this.level().destroyBlock(hitPos, true, this);
+                    BLOCK_MINING_PROGRESS.remove(hitPos);
+                    this.level().destroyBlockProgress(hitPos.hashCode(), hitPos, -1);
                 } else {
-                    BLOCK_MINING_PROGRESS.put(targetPos, currentProgress);
-                    int stage = Math.min((int) (currentProgress * 10), 9);
-                    try {
-                        this.level().destroyBlockProgress(breakerId, targetPos, stage);
-                    } catch (Exception ignored) {}
+                    BLOCK_MINING_PROGRESS.put(hitPos, currentProgress);
                 }
             }
-
             this.discard();
             return;
         }
-
         Vec3 motion = this.getDeltaMovement();
         this.setPos(this.getX() + motion.x, this.getY() + motion.y, this.getZ() + motion.z);
-
         if (this.tickCount > 160) {
             this.discard();
         }

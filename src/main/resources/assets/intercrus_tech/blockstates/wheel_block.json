@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "intercrus_tech:block/wheel_block" },
+    "facing=south": { "model": "intercrus_tech:block/wheel_block", "y": 180 },
+    "facing=west": { "model": "intercrus_tech:block/wheel_block", "y": 270 },
+    "facing=east": { "model": "intercrus_tech:block/wheel_block", "y": 90 }
+  }
+}

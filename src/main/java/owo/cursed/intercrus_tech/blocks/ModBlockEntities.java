@@ -10,6 +10,7 @@ import owo.cursed.intercrus_tech.blocks.cannon.CannonBarrelEntity;
 import owo.cursed.intercrus_tech.blocks.cannon.CannonLoaderEntity;
 import owo.cursed.intercrus_tech.blocks.solar_impulse_drive.SolarImpulseCoolerEntity;
 import owo.cursed.intercrus_tech.blocks.solar_impulse_drive.SolarImpulseDriveEntity;
+import owo.cursed.intercrus_tech.blocks.wheel.WheelBlockEntity;
 
 public class ModBlockEntities {
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES =
@@ -35,6 +36,10 @@ public class ModBlockEntities {
     public static final RegistryObject<BlockEntityType<CannonLoaderEntity>> CANNON_LOADER_BLOCK_ENTITY =
             BLOCK_ENTITIES.register("cannon_loader_entity",
                     () -> BlockEntityType.Builder.of(CannonLoaderEntity::new, ModBlocks.CANNON_LOADER.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<WheelBlockEntity>> WHEEL_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("wheel_entity",
+                    () -> BlockEntityType.Builder.of(WheelBlockEntity::new, ModBlocks.WHEEL_BLOCK.get()).build(null));
 
 
 }

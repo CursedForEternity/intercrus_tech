@@ -3,5 +3,7 @@
   "block.intercrus_tech.solar_impulse_cooler": "Solar Impulse Cooler",
   "block.intercrus_tech.autocannon": "Autocannon",
   "block.intercrus_tech.cannon_loader": "Cannon Loader",
-  "block.intercrus_tech.cannon_barrel": "Cannon Barrel"
+  "block.intercrus_tech.cannon_barrel": "Cannon Barrel",
+  "subtitles.intercrus_tech.autocannon": "Autocannon Flash",
+  "subtitles.intercrus_tech.cannon": "Cannon Explosion"
 }

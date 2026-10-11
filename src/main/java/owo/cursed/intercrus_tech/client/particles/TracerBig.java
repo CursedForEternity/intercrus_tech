@@ -21,7 +21,7 @@ public class TracerBig extends TextureSheetParticle {
     protected TracerBig(ClientLevel level, double x, double y, double z,
                         double xSpeed, double ySpeed, double zSpeed) {
         super(level, x, y, z, xSpeed, ySpeed, zSpeed);
-        double scale = xSpeed > 0 ? xSpeed : 1.0;
+        double scale = xSpeed > 0 ? xSpeed : 1.0 *5;
 
         this.xd = 0;
         this.yd = 0;
